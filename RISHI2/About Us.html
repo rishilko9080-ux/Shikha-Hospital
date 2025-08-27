@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f9fc;
+        }
+        .header {
+            background-color: #0a5f8b;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .container {
+            width: 85%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        .language-toggle {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .language-toggle button {
+            background: #0a5f8b;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .language-toggle button:hover {
+            background: #0d7ab8;
+        }
+        .section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #0a5f8b;
+        }
+        .values {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .value-box {
+            flex-basis: 48%;
+            background: #e6f2f8;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        .footer {
+            background-color: #0a5f8b;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    
+     Navigation
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://sun9-69.userapi.com/impg/gFCrw8pcz6yKUhN1I7C1qHMd7QyDd3c4iVX4YA/PADnh7pdrnc.jpg?size=604x345&quality=95&sign=b6fd58cb61be77716356baa8728e1e04&type=album" alt="MediCare Hospital" height="50" alt="MediCare Hospital" height="50">
+                
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Index.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <a href="#appointment" class="btn btn-primary ms-lg-3">Appointment</a>
+            </div>
+        </div>
+    </nav>  
+    
+
+    <div class="header">
+        <h1>About [Hospital Name]</h1>
+    </div>
+
+    <div class="container">
+        <div class="language-toggle">
+            <button onclick="showEnglish()">English</button>
+            <button onclick="showHindi()">हिंदी</button>
+        </div>
+
+        <!-- English Version -->
+        <div id="english-version">
+            <div class="section">
+                <h2>Our Story</h2>
+                <p>Established in [Year], [Hospital Name] has grown from a modest healthcare facility to one of the region's most trusted multi-specialty hospitals. Our journey has been marked by a relentless pursuit of medical excellence and compassionate care.</p>
+            </div>
+
+            <div class="section">
+                <h2>Who We Are</h2>
+                <p>[Hospital Name] is a NABH accredited, [XX]-bed tertiary care hospital offering comprehensive healthcare services. With over [XX] specialist doctors and [XXX] support staff, we serve more than [XXXX] patients annually across [XX] specialties.</p>
+            </div>
+
+            <div class="section">
+                <h2>Our Mission</h2>
+                <p>To provide exceptional, ethical, and affordable healthcare through advanced technology, skilled professionals, and patient-centered services that meet international standards.</p>
+            </div>
+
+            <div class="section">
+                <h2>Our Vision</h2>
+                <p>To be recognized as a center of medical excellence that transforms lives through innovative treatments while maintaining the highest standards of medical ethics.</p>
+            </div>
+
+            <div class="section">
+                <h2>Our Values</h2>
+                <div class="values">
+                    <div class="value-box">
+                        <h3>Patient First</h3>
+                        <p>Every decision we make prioritizes patient well-being and comfort.</p>
+                    </div>
+                    <div class="value-box">
+                        <h3>Clinical Excellence</h3>
+                        <p>We maintain the highest standards in medical treatment and care.</p>
+                    </div>
+                    <div class="value-box">
+                        <h3>Integrity</h3>
+                        <p>We practice transparency and ethical medical care at all times.</p>
+                    </div>
+                    <div class="value-box">
+                        <h3>Innovation</h3>
+                        <p>We continuously adopt the latest medical technologies and treatments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hindi Version -->
+        <div id="hindi-version" class="">
+            <div class="section">
+                <h2>हमारी कहानी</h2>
+                <p>[वर्ष] में स्थापित, [अस्पताल का नाम] एक साधारण स्वास्थ्य सुविधा से विकसित होकर क्षेत्र के सबसे विश्वसनीय मल्टीस्पेशियलिटी अस्पतालों में से एक बन गया है। चिकित्सा उत्कृष्टता और संवेदनशील देखभाल की हमारी निरंतर खोज ने हमारी यात्रा को चिह्नित किया है।</p>
+            </div>
+
+            <div class="section">
+                <h2>हम कौन हैं</h2>
+                <p>[अस्पताल का नाम] एक NABH प्रमाणित, [XX]-बिस्तरों वाला तृतीयक देखभाल अस्पताल है जो व्यापक स्वास्थ्य सेवाएं प्रदान करता है। [XX] से अधिक विशेषज्ञ डॉक्टरों और [XXX] सहायक कर्मचारियों के साथ, हम प्रतिवर्ष [XX] विशेषताओं में [XXXX] से अधिक रोगियों की सेवा करते हैं।</p>
+            </div>
+
+            <div class="section">
+                <h2>हमारा मिशन</h2>
+                <p>अंतरराष्ट्रीय मानकों को पूरा करने वाली उन्नत तकनीक, कुशल पेशेवरों और रोगी-केंद्रित सेवाओं के माध्यम से असाधारण, नैतिक और सस्ती स्वास्थ्य सेवा प्रदान करना।</p>
+            </div>
+
+            <div class="section">
+                <h2>हमारी दृष्टि</h2>
+                <p>चिकित्सा उत्कृष्टता के केंद्र के रूप में पहचाने जाने के लिए जो चिकित्सा नैतिकता के उच्चतम मानकों को बनाए रखते हुए नवीन उपचारों के माध्यम से जीवन को बदलता है।</p>
+            </div>
+
+            <div class="section">
+                <h2>हमारे मूल्य</h2>
+                <div class="values">
+                    <div class="value-box">
+                        <h3>रोगी पहले</h3>
+                        <p>हम जो भी निर्णय लेते हैं उसमें रोगी की भलाई और आराम को प्राथमिकता दी जाती है।</p>
+                    </div>
+                    <div class="value-box">
+                        <h3>नैदानिक उत्कृष्टता</h3>
+                        <p>हम चिकित्सा उपचार और देखभाल में उच्चतम मानकों को बनाए रखते हैं।</p>
+                    </div>
+                    <div class="value-box">
+                        <h3>ईमानदारी</h3>
+                        <p>हम हर समय पारदर्शिता और नैतिक चिकित्सा देखभाल का अभ्यास करते हैं।</p>
+                    </div>
+                    <div class="value-box">
+                        <h3>नवाचार</h3>
+                        <p>हम नवीनतम चिकित्सा तकनीकों और उपचारों को लगातार अपनाते हैं।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 [Hospital Name]. All Rights Reserved.</p>
+    </div>
+    
+    <!-- About Section -->
+    <section class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://med.virginia.edu/surgery/wp-content/uploads/sites/459/2017/08/uvahospbedtower_header_3-2.jpg" alt="About Shikha Hospital" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-title">
+                        <h2>About Shikha Hospital</h2>
+                        <p class="lead">Providing exceptional healthcare since 2010</p>
+                    </div>
+                    <p>Shikha Hospital is a leading healthcare provider dedicated to delivering high-quality medical services with compassion and innovation. Our state-of-the-art facility is equipped with the latest technology and staffed by experienced professionals.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Board-certified physicians</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> 24/7 emergency services</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Advanced diagnostic equipment</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Patient-centered care</li>
+                    </ul>
+                    <a href="about.html" class="btn btn-primary mt-3">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showEnglish() {
+            document.getElementById('english-version').style.display = 'block';
+            document.getElementById('hindi-version').style.display = 'none';
+        }
+        
+        function showHindi() {
+            document.getElementById('english-version').style.display = 'none';
+            document.getElementById('hindi-version').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

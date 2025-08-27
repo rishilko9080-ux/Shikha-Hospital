@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orthopedic Services</title>
+      <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1, h2, h3 {
+            color: #2a5885;
+        }
+        
+        /* Service Cards */
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .service-card {
+            width: 350px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-image {
+            height: 200px;
+            background-color: #f0f0f0;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-content {
+            padding: 20px;
+        }
+        
+        .read-more-content {
+            display: none;
+            padding-top: 10px;
+        }
+        
+        .read-more-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #2a5885;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .read-more-btn:hover {
+            background-color: #1e3f66;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .service-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://sun9-69.userapi.com/impg/gFCrw8pcz6yKUhN1I7C1qHMd7QyDd3c4iVX4YA/PADnh7pdrnc.jpg?size=604x345&quality=95&sign=b6fd58cb61be77716356baa8728e1e04&type=album" alt="MediCare Hospital" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About Us.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <a href="Appointment.html" class="btn btn-primary ms-lg-3">Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1 style="text-align: center;">Orthopedic Services</h1>
+        <p style="text-align: center;">Comprehensive care for your musculoskeletal health</p>
+    </header>
+    
+    <main>
+        <div class="services-container">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://www.verywellhealth.com/thmb/ZSB7zgSmCsoLgH53zfnGlMxKVJ8=/4000x2857/filters:fill(87E3EF,1)/total-knee-replacement-123663788-5b01c724642dca0037c139a9.jpg');"></div>
+                <div class="service-content">
+                    <h3>Joint Replacement</h3>
+                    <p>Advanced surgical procedures to replace damaged joints with artificial implants...</p>
+                    <div class="read-more-content" id="content1">
+                        <p>Our joint replacement specialists use the latest techniques including minimally invasive approaches to replace hips, knees, and shoulders. Recovery programs are tailored to each patient's needs.</p>
+                        <ul>
+                            <li>Total hip replacement</li>
+                            <li>Total knee replacement</li>
+                            <li>Partial knee replacement</li>
+                            <li>Shoulder replacement</li>
+                        </ul>
+                    </div>
+                    <button class="read-more-btn" onclick="toggleReadMore('content1', this)"></button>
+                </div>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://img.freepik.com/premium-vector/athlete-runs-jogs-tiny-physicians-treat-research-injuries-sports-medicine-vector-concept-landing-page-sports-medical-services-doping-control-use-stimulants_163674-297.jpg');"></div>
+                <div class="service-content">
+                    <h3>Sports Medicine</h3>
+                    <p>Specialized care for athletes and active individuals dealing with sports-related injuries...</p>
+                    <div class="read-more-content" id="content2">
+                        <p>Our sports medicine team includes orthopedic surgeons, physical therapists, and athletic trainers who work together to get you back to your sport safely.</p>
+                        <ul>
+                            <li>ACL reconstruction</li>
+                            <li>Rotator cuff repair</li>
+                            <li>Meniscus treatment</li>
+                            <li>Concussion management</li>
+                        </ul>
+                    </div>
+                    <button class="read-more-btn" onclick="toggleReadMore('content2', this)"></button>
+                </div>
+            </div>
+            
+            <!-- Service 3 -->
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://www.shutterstock.com/shutterstock/photos/2171343901/display_1500/stock-photo-human-spine-disease-d-illustration-2171343901.jpg');"></div>
+                <div class="service-content">
+                    <h3>Spine Care</h3>
+                    <p>Comprehensive treatment for back and neck pain, from conservative care to complex surgery...</p>
+                    <div class="read-more-content" id="content3">
+                        <p>Our spine specialists offer a full range of treatments including physical therapy, injections, and when necessary, surgical interventions.</p>
+                        <ul>
+                            <li>Discectomy</li>
+                            <li>Spinal fusion</li>
+                            <li>Artificial disc replacement</li>
+                            <li>Scoliosis treatment</li>
+                        </ul>
+                    </div>
+                    <button class="read-more-btn" onclick="toggleReadMore('content3', this)"></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        function toggleReadMore(contentId, button) {
+            const content = document.getElementById(contentId);
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                button.textContent = 'Read More';
+            } else {
+                content.style.display = 'block';
+                button.textContent = 'Read Less';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiology - Learn More</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #0077b6, #03045e);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 1rem 0;
+        }
+        
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #0077b6;
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 3rem 0;
+        }
+        
+        .article-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        h2 {
+            color: #03045e;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            border-bottom: 2px solid #0077b6;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        h3 {
+            color: #0077b6;
+            margin: 1.5rem 0 1rem;
+            font-size: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .image-container {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .image-container figcaption {
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: #666;
+        }
+        
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .card {
+            flex: 1 1 300px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .card h3 {
+            margin-top: 0;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #03045e;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-section {
+            flex: 1 1 300px;
+            margin-bottom: 1.5rem;
+            padding: 0 1.5rem;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            
+            .article-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://sun9-69.userapi.com/impg/gFCrw8pcz6yKUhN1I7C1qHMd7QyDd3c4iVX4YA/PADnh7pdrnc.jpg?size=604x345&quality=95&sign=b6fd58cb61be77716356baa8728e1e04&type=album" alt="MediCare Hospital" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About Us.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <a href="Appointment.html" class="btn btn-primary ms-lg-3">Appointment</a>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="container">
+            <h1>Cardiology: The Study of Heart Health</h1>
+            <p>Understanding the cardiovascular system and maintaining heart health</p>
+        </div>
+    </header>
+
+<!--     
+    <nav>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#conditions">Heart Conditions</a></li>
+            <li><a href="#diagnosis">Diagnosis</a></li>
+            <li><a href="#treatments">Treatments</a></li>
+            <li><a href="#prevention">Prevention</a></li>
+        </ul>
+    </nav> -->
+    
+    <div class="main-content container">
+        <article id="overview" class="article-container">
+            <h2>Cardiology Overview</h2>
+            <p>Cardiology is the branch of medicine that deals with disorders of the heart and the cardiovascular system. The field includes medical diagnosis and treatment of congenital heart defects, coronary artery disease, heart failure, valvular heart disease, and electrophysiology.</p>
+            
+            <div class="image-container">
+                <img style="height: 500px; width: 800px;" src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Heart anatomy illustration">
+                <figcaption>The human heart and major blood vessels</figcaption>
+            </div>
+            
+            <p>Cardiologists are physicians who specialize in the diagnosis and treatment of heart conditions. They may further specialize in areas such as interventional cardiology, electrophysiology, or pediatric cardiology.</p>
+            
+            <h3>The Cardiovascular System</h3>
+            <p>The cardiovascular system consists of the heart and blood vessels. Its primary function is to transport oxygen, nutrients, hormones, and cellular waste products throughout the body. The heart acts as a pump that circulates blood through two main circuits:</p>
+            
+            <ul>
+                <li><strong>Pulmonary circulation:</strong> Carries deoxygenated blood from the heart to the lungs and returns oxygenated blood back to the heart.</li>
+                <li><strong>Systemic circulation:</strong> Delivers oxygenated blood to all body tissues and returns deoxygenated blood to the heart.</li>
+            </ul>
+        </article>
+        
+        <article id="conditions" class="article-container">
+            <h2>Common Heart Conditions</h2>
+            <p>Cardiologists diagnose and treat a wide range of heart and cardiovascular conditions. Some of the most common include:</p>
+            
+            <div class="card-container">
+                <div class="card">
+                    <img  src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Coronary artery disease">
+                    <div class="card-content">
+                        <h3>Coronary Artery Disease</h3>
+                        <p>The buildup of plaque in the heart's arteries, leading to reduced blood flow to the heart muscle.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Heart failure">
+                    <div class="card-content">
+                        <h3>Heart Failure</h3>
+                        <p>A condition where the heart can't pump enough blood to meet the body's needs.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Arrhythmia">
+                    <div class="card-content">
+                        <h3>Arrhythmias</h3>
+                        <p>Abnormal heart rhythms that can cause the heart to beat too fast, too slow, or irregularly.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Other Conditions</h3>
+            <ul>
+                <li>Valvular heart disease (problems with heart valves)</li>
+                <li>Congenital heart defects (heart problems present at birth)</li>
+                <li>Cardiomyopathy (disease of the heart muscle)</li>
+                <li>Pericardial disease (problems with the heart's outer lining)</li>
+                <li>Aortic disease and Marfan syndrome</li>
+            </ul>
+        </article>
+        
+        <article id="diagnosis" class="article-container">
+            <h2>Diagnostic Procedures</h2>
+            <p>Cardiologists use various tests and procedures to diagnose heart conditions:</p>
+            
+            <h3>Common Diagnostic Tests</h3>
+            <ul>
+                <li><strong>Electrocardiogram (ECG/EKG):</strong> Records the electrical activity of the heart</li>
+                <li><strong>Echocardiogram:</strong> Uses sound waves to create images of the heart</li>
+                <li><strong>Stress tests:</strong> Measures heart function during physical activity</li>
+                <li><strong>Cardiac catheterization:</strong> Involves threading a thin tube into the heart</li>
+                <li><strong>Holter monitoring:</strong> Continuous ECG recording over 24-48 hours</li>
+                <li><strong>Cardiac CT or MRI:</strong> Advanced imaging of the heart</li>
+            </ul>
+            
+            <div class="image-container">
+                <img style="height: 500px; width: 800px;" src="https://images.unsplash.com/photo-1551601651-bc60f254d532?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Doctor performing echocardiogram">
+                <figcaption>Echocardiogram being performed on a patient</figcaption>
+            </div>
+        </article>
+        
+        <article id="treatments" class="article-container">
+            <h2>Treatment Options</h2>
+            <p>Treatment for heart conditions depends on the specific diagnosis but may include:</p>
+            
+            <h3>Lifestyle Changes</h3>
+            <ul>
+                <li>Heart-healthy diet</li>
+                <li>Regular exercise</li>
+                <li>Smoking cessation</li>
+                <li>Stress management</li>
+                <li>Weight management</li>
+            </ul>
+            
+            <h3>Medications</h3>
+            <p>Common cardiac medications include:</p>
+            <ul>
+                <li>Blood pressure medications</li>
+                <li>Cholesterol-lowering drugs</li>
+                <li>Blood thinners</li>
+                <li>Diuretics</li>
+                <li>Anti-arrhythmic drugs</li>
+            </ul>
+            
+            <h3>Medical Procedures</h3>
+            <div class="card-container">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Angioplasty">
+                    <div class="card-content">
+                        <h3>Angioplasty and Stenting</h3>
+                        <p>Opening blocked arteries and placing a small mesh tube to keep them open.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1581595219315-a187dd40c322?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Pacemaker">
+                    <div class="card-content">
+                        <h3>Pacemaker Implantation</h3>
+                        <p>A small device implanted to help control abnormal heart rhythms.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Heart surgery">
+                    <div class="card-content">
+                        <h3>Heart Surgery</h3>
+                        <p>Various surgical procedures including bypass surgery and valve repair/replacement.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <article id="prevention" class="article-container">
+            <h2>Heart Disease Prevention</h2>
+            <p>Many forms of heart disease can be prevented or treated with healthy lifestyle choices. Key prevention strategies include:</p>
+            
+            <h3>Healthy Diet</h3>
+            <p>Eat a diet rich in:</p>
+            <ul>
+                <li>Fruits and vegetables</li>
+                <li>Whole grains</li>
+                <li>Lean proteins (fish, poultry, legumes)</li>
+                <li>Healthy fats (olive oil, nuts, avocados)</li>
+            </ul>
+            <p>Limit intake of:</p>
+            <ul>
+                <li>Saturated and trans fats</li>
+                <li>Sodium (salt)</li>
+                <li>Added sugars</li>
+                <li>Processed foods</li>
+            </ul>
+            
+            <h3>Regular Exercise</h3>
+            <p>Aim for at least 150 minutes of moderate-intensity aerobic activity or 75 minutes of vigorous activity each week, plus muscle-strengthening activities on 2 or more days.</p>
+            
+            <h3>Other Preventive Measures</h3>
+            <ul>
+                <li>Don't smoke or use tobacco</li>
+                <li>Maintain a healthy weight</li>
+                <li>Get quality sleep (7-9 hours nightly)</li>
+                <li>Manage stress effectively</li>
+                <li>Limit alcohol consumption</li>
+                <li>Get regular health screenings (blood pressure, cholesterol, diabetes)</li>
+            </ul>
+            
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1535914254981-b5012eebbd15?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Healthy lifestyle">
+                <figcaption>A healthy lifestyle is key to preventing heart disease</figcaption>
+            </div>
+        </article>
+    </div>
+    
+    <footer>
+        <div class="footer-content container">
+            <div class="footer-section">
+                <h3>About Cardiology</h3>
+                <p>Cardiology is a medical specialty focused on the heart and cardiovascular system, dedicated to preventing, diagnosing, and treating heart disease.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#overview">Cardiology Overview</a></li>
+                    <li><a href="#conditions">Heart Conditions</a></li>
+                    <li><a href="#diagnosis">Diagnostic Tests</a></li>
+                    <li><a href="#treatments">Treatment Options</a></li>
+                    <li><a href="#prevention">Prevention</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Find a Cardiologist</a></li>
+                    <li><a href="#">Heart Health Calculators</a></li>
+                    <li><a href="#">Support Groups</a></li>
+                    <li><a href="#">Research Studies</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright container">
+            <p>&copy; 2023 Cardiology Information Center. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

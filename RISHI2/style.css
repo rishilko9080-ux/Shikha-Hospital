@@ -1,0 +1,359 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.section-title {
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #0d6efd;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title p {
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+/* Top Bar */
+.top-bar {
+    font-size: 0.9rem;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+}
+
+.hero-section .carousel-item {
+    height: 100vh;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-section .carousel-item img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.hero-section .carousel-caption {
+    bottom: 180px;
+    z-index: 2;
+}
+
+.hero-section .carousel-caption h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section .carousel-caption p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section .carousel-indicators {
+    bottom: 100px;
+}
+
+.hero-section .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+/* Emergency Section */
+.emergency-section {
+    position: relative;
+    z-index: 1;
+}
+
+.emergency-section h3 {
+    font-weight: 600;
+}
+
+/* Services Section */
+.service-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #0d6efd;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    background: #0d6efd;
+    color: #fff;
+}
+
+/* About Section */
+.about-section {
+    background: #fff;
+}
+
+/* Doctors Section */
+.doctor-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.doctor-card img {
+    transition: all 0.3s ease;
+}
+
+.doctor-card:hover img {
+    opacity: 0.9;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background: #f8f9fa;
+    border-radius: 50%;
+    margin: 0 5px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #0d6efd;
+    color: #fff;
+}
+
+/* Testimonials Section */
+.testimonial-item {
+    padding: 0 15%;
+}
+
+.testimonial-img img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+}
+
+.testimonial-content p {
+    font-size: 1.25rem;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonial-content h5 {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Appointment Section */
+.appointment-section {
+    background: linear-gradient(rgba(13, 110, 253, 0.9), rgba(13, 110, 253, 0.9)), url('../images/appointment-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Statistics Section */
+.stat-item {
+    padding: 20px;
+}
+
+.stat-item h3 {
+    font-weight: 700;
+    color: #0d6efd;
+}
+
+/* Blog Section */
+.blog-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.blog-meta {
+    font-size: 0.9rem;
+}
+
+/* Newsletter Section */
+.newsletter-form .form-control {
+    height: 50px;
+    border: none;
+    border-radius: 0;
+}
+
+.newsletter-form .btn {
+    border-radius: 0;
+}
+
+/* Footer */
+.footer {
+    background: #212529;
+}
+
+.footer-links h5, .footer-contact h5 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-links h5::after, .footer-contact h5::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #0d6efd;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-links ul li a, .footer-contact ul li a {
+    color: #adb5bd;
+    transition: all 0.3s ease;
+}
+
+.footer-links ul li a:hover, .footer-contact ul li a:hover {
+    color: #0d6efd;
+    padding-left: 5px;
+}
+
+.footer-about p {
+    color: #adb5bd;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 30px;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+    .hero-section .carousel-caption h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section .carousel-caption p {
+        font-size: 1.2rem;
+    }
+    
+    .section-title h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section .carousel-item {
+        height: 80vh;
+        min-height: 500px;
+    }
+    
+    .hero-section .carousel-caption {
+        bottom: 100px;
+    }
+    
+    .hero-section .carousel-caption h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section .carousel-caption p {
+        font-size: 1rem;
+    }
+    
+    .testimonial-item {
+        padding: 0 5%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-section .carousel-item {
+        height: 70vh;
+        min-height: 400px;
+    }
+    
+    .hero-section .carousel-caption h1 {
+        font-size: 1.5rem;
+    }
+    
+    .section-title h2 {
+        font-size: 1.75rem;
+    }
+}
